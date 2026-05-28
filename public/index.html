@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Veliz Stay — Verified home stays in Pollachi, Coimbatore & Udumalpet</title>
+<meta name="description" content="Fully managed, ID-verified home stays from ₹400/day across Pollachi, Coimbatore and Udumalpet.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.34.0/dist/tabler-icons.min.css">
+<style>
+:root{
+  --navy:#1a1a2e;--blue:#2563a8;--blue-lt:#e8f0fb;
+  --green:#16a34a;--green-lt:#dcfce7;
+  --amber:#b45309;--amber-lt:#fef3c7;
+  --red:#dc2626;--red-lt:#fee2e2;
+  --g50:#f8f9fa;--g100:#f1f3f5;--g200:#e9ecef;--g300:#dee2e6;
+  --g400:#ced4da;--g500:#adb5bd;--g600:#6c757d;--g700:#495057;--g800:#343a40;--g900:#212529;
+  --fd:'DM Serif Display',Georgia,serif;--fb:'DM Sans',system-ui,sans-serif;
+  --rm:10px;--rl:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--fb);font-size:14px;color:var(--g900);background:#fff;line-height:1.6}
+a{text-decoration:none;color:inherit}
+input,select,textarea,button{font-family:var(--fb)}
+
+/* NAV */
+.nav{display:flex;align-items:center;justify-content:space-between;padding:0 20px;height:56px;border-bottom:1px solid var(--g200);background:#fff;position:sticky;top:0;z-index:100}
+.nav-logo{display:flex;align-items:center;gap:8px;cursor:pointer}
+.logo-mark{width:32px;height:32px;background:var(--navy);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-family:var(--fd);font-size:17px;font-style:italic}
+.logo-text{font-size:16px;font-weight:500;color:var(--navy)}
+.logo-text span{color:var(--blue)}
+.nav-links{display:flex;gap:18px}
+.nav-links a{font-size:13px;color:var(--g600);cursor:pointer;transition:color .15s}
+.nav-links a:hover{color:var(--navy)}
+.nav-right{display:flex;gap:8px;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:5px;padding:7px 14px;border-radius:var(--rm);font-size:13px;font-weight:500;cursor:pointer;border:none;transition:all .15s;line-height:1}
+.btn-primary{background:var(--navy);color:#fff}.btn-primary:hover{background:#0f0f1f}
+.btn-blue{background:var(--blue);color:#fff}.btn-blue:hover{background:#1a4f8a}
+.btn-green{background:var(--green);color:#fff}.btn-green:hover{background:#15803d}
+.btn-red{background:var(--red);color:#fff}.btn-red:hover{background:#b91c1c}
+.btn-outline{background:transparent;border:1px solid var(--g300);color:var(--g700)}.btn-outline:hover{border-color:var(--g500);color:var(--g900)}
+.btn-ghost{background:transparent;color:var(--g600);border:none}.btn-ghost:hover{color:var(--g900);background:var(--g100)}
+.btn-sm{padding:5px 11px;font-size:12px}
+.btn-lg{padding:10px 22px;font-size:14px}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+
+/* PAGES */
+.page{display:none}.page.active{display:block}
+
+/* HERO */
+.hero{padding:36px 20px 24px;border-bottom:1px solid var(--g200)}
+.hero-inner{max-width:940px;margin:0 auto}
+.hero h1{font-family:var(--fd);font-size:28px;font-weight:400;color:var(--navy);line-height:1.25;margin-bottom:7px}
+.hero h1 em{color:var(--blue);font-style:italic}
+.hero-sub{font-size:14px;color:var(--g600);margin-bottom:20px;max-width:480px}
+.hero-stats{display:flex;gap:26px;margin-bottom:22px;flex-wrap:wrap}
+.hs-n{font-family:var(--fd);font-size:22px;color:var(--navy)}
+.hs-l{font-size:11px;color:var(--g500);margin-top:1px}
+.search-bar{display:flex;gap:8px;flex-wrap:wrap;background:var(--g50);border:1px solid var(--g200);border-radius:var(--rl);padding:10px 12px}
+.search-bar input,.search-bar select{background:#fff;border:1px solid var(--g200);border-radius:var(--rm);padding:7px 10px;font-size:13px;outline:none;flex:1;min-width:120px;color:var(--g900)}
+.search-bar input:focus,.search-bar select:focus{border-color:var(--blue)}
+
+/* LAYOUT */
+.layout{display:grid;grid-template-columns:205px 1fr;gap:20px;max-width:940px;margin:0 auto;padding:20px}
+
+/* SIDEBAR */
+.sidebar{font-size:13px}
+.f-section{margin-bottom:16px}
+.f-label{font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:.06em;color:var(--g500);margin-bottom:7px;display:flex;justify-content:space-between;align-items:center}
+.f-label a{text-transform:none;letter-spacing:0;color:var(--blue);cursor:pointer;font-weight:400;font-size:12px}
+.check-row{display:flex;align-items:center;gap:7px;padding:3px 0;cursor:pointer}
+.check-row input[type=checkbox]{accent-color:var(--navy);width:13px;height:13px;cursor:pointer}
+.check-row span{color:var(--g700)}
+.cc{margin-left:auto;font-size:11px;color:var(--g400)}
+.s-div{border:none;border-top:1px solid var(--g100);margin:12px 0}
+
+/* LISTINGS */
+.list-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.list-count{font-size:13px;color:var(--g600)}
+.sort-row{display:flex;align-items:center;gap:7px;font-size:13px;color:var(--g600)}
+.sort-row select{border:1px solid var(--g200);border-radius:var(--rm);padding:5px 8px;font-size:13px;background:#fff;cursor:pointer}
+.lcard{background:#fff;border:1px solid var(--g200);border-radius:var(--rl);padding:14px;margin-bottom:9px;cursor:pointer;transition:border-color .15s,box-shadow .15s}
+.lcard:hover{border-color:var(--g400);box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.lcard-inner{display:grid;grid-template-columns:72px 1fr;gap:12px}
+.lcard-thumb{width:72px;height:62px;border-radius:var(--rm);background:var(--g100);border:1px solid var(--g200);display:flex;align-items:center;justify-content:center;font-size:26px;flex-shrink:0}
+.lcard-top{display:flex;justify-content:space-between;gap:8px;margin-bottom:3px}
+.lcard-name{font-size:14px;font-weight:500;color:var(--navy)}
+.lcard-price{font-size:14px;font-weight:500;color:var(--navy);white-space:nowrap;text-align:right}
+.lcard-price small{font-size:11px;font-weight:400;color:var(--g500)}
+.lcard-meta{font-size:12px;color:var(--g500);margin-bottom:6px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.chips{display:flex;flex-wrap:wrap;gap:4px}
+.chip{font-size:11px;padding:2px 7px;border-radius:99px;border:1px solid var(--g200);color:var(--g600);background:var(--g50)}
+.chip-blue{background:var(--blue-lt);border-color:#93c5fd;color:#1e40af}
+.chip-green{background:var(--green-lt);border-color:#86efac;color:#166534}
+.chip-amber{background:var(--amber-lt);border-color:#fcd34d;color:#92400e}
+.lcard-footer{display:flex;align-items:center;justify-content:space-between;margin-top:7px;padding-top:7px;border-top:1px solid var(--g100)}
+.lcard-loc{font-size:12px;color:var(--g500);display:flex;align-items:center;gap:3px}
+.lcard-rating{font-size:12px;color:var(--g500);display:flex;align-items:center;gap:3px}
+.grade-pill{font-size:10px;padding:1px 6px;border-radius:99px;font-weight:500}
+.gGold{background:#fef9c3;color:#713f12;border:1px solid #fde68a}
+.gSilver{background:var(--blue-lt);color:#1e3a8a;border:1px solid #bfdbfe}
+.gBronze{background:var(--amber-lt);color:#78350f;border:1px solid #fcd34d}
+.vbadge{display:inline-flex;align-items:center;gap:3px;font-size:10px;color:#166534;background:var(--green-lt);border-radius:99px;padding:1px 6px}
+
+/* DETAIL */
+.detail-wrap{max-width:880px;margin:0 auto;padding:20px}
+.detail-back{display:inline-flex;align-items:center;gap:5px;font-size:13px;color:var(--g600);cursor:pointer;margin-bottom:16px;border:none;background:none}
+.detail-back:hover{color:var(--navy)}
+.detail-title{font-family:var(--fd);font-size:24px;color:var(--navy);margin-bottom:4px}
+.detail-sub{font-size:13px;color:var(--g500);display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.detail-grid{display:grid;grid-template-columns:1fr 320px;gap:20px}
+.section-lbl{font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:.06em;color:var(--g500);margin-bottom:8px}
+.amenity-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:7px}
+.amenity-item{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--g700);padding:6px 9px;border:1px solid var(--g200);border-radius:var(--rm);background:var(--g50)}
+.t-row{display:flex;justify-content:space-between;font-size:13px;padding:6px 0;border-bottom:1px solid var(--g100)}
+.t-row:last-child{border-bottom:none;font-weight:500;color:var(--navy)}
+.review-item{padding:10px 0;border-bottom:1px solid var(--g100)}
+.review-item:last-child{border-bottom:none}
+.review-head{display:flex;justify-content:space-between;margin-bottom:3px}
+.review-name{font-size:13px;font-weight:500}
+.review-stars{color:#f59e0b;font-size:12px}
+.review-text{font-size:13px;color:var(--g600)}
+.review-date{font-size:11px;color:var(--g400)}
+
+/* BOOKING BOX */
+.booking-box{background:#fff;border:1px solid var(--g200);border-radius:var(--rl);padding:16px;position:sticky;top:68px}
+.booking-box h3{font-size:15px;font-weight:500;margin-bottom:12px;color:var(--navy)}
+.timer-badge{background:var(--amber-lt);color:var(--amber);border:1px solid #fcd34d;border-radius:var(--rm);padding:5px 9px;font-size:12px;display:flex;align-items:center;gap:5px;margin-bottom:11px}
+.total-line{display:flex;justify-content:space-between;font-size:13px;padding:4px 0;color:var(--g600)}
+.total-line.grand{font-weight:500;color:var(--navy);border-top:1px solid var(--g200);padding-top:7px;margin-top:3px;font-size:14px}
+
+/* FORMS */
+.form-group{margin-bottom:11px}
+.form-label{font-size:12px;font-weight:500;color:var(--g600);margin-bottom:3px;display:block}
+.form-input{width:100%;border:1px solid var(--g300);border-radius:var(--rm);padding:7px 10px;font-size:13px;color:var(--g900);outline:none;transition:border-color .15s}
+.form-input:focus{border-color:var(--blue)}
+.form-select{width:100%;border:1px solid var(--g300);border-radius:var(--rm);padding:7px 10px;font-size:13px;background:#fff;color:var(--g900);cursor:pointer;outline:none}
+.form-select:focus{border-color:var(--blue)}
+.otp-row{display:flex;gap:6px}
+.otp-row input{flex:1}
+
+/* VERIFY SECTION */
+.v-section{background:var(--g50);border:1px solid var(--g200);border-radius:var(--rm);padding:12px;margin-bottom:10px}
+.v-section h4{font-size:13px;font-weight:500;margin-bottom:9px;display:flex;align-items:center;gap:6px;color:var(--navy)}
+.social-row{display:flex;flex-wrap:wrap;gap:5px;margin-top:7px}
+.schip{display:inline-flex;align-items:center;gap:4px;padding:3px 8px;border:1px solid var(--g300);border-radius:99px;font-size:11px;color:var(--g600);cursor:pointer;background:#fff;transition:all .15s}
+.schip.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+
+/* AUTH */
+.auth-wrap{max-width:390px;margin:60px auto;padding:0 20px}
+.auth-card{background:#fff;border:1px solid var(--g200);border-radius:var(--rl);padding:26px}
+.auth-logo{text-align:center;margin-bottom:20px}
+.auth-title{font-family:var(--fd);font-size:21px;color:var(--navy);text-align:center;margin-bottom:3px}
+.auth-sub{font-size:13px;color:var(--g500);text-align:center;margin-bottom:18px}
+.auth-switch{font-size:13px;color:var(--g500);text-align:center;margin-top:14px}
+.auth-switch a{color:var(--blue);cursor:pointer}
+.demo-note{font-size:11px;color:var(--g400);text-align:center;margin-top:10px}
+
+/* DASHBOARD */
+.dash-wrap{max-width:940px;margin:0 auto;padding:24px 20px}
+.dash-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;flex-wrap:wrap;gap:10px}
+.dash-title{font-family:var(--fd);font-size:22px;color:var(--navy)}
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:20px}
+.stat-card{background:var(--g50);border:1px solid var(--g200);border-radius:var(--rm);padding:12px}
+.stat-n{font-family:var(--fd);font-size:24px;color:var(--navy)}
+.stat-l{font-size:12px;color:var(--g500);margin-top:1px}
+.table-wrap{background:#fff;border:1px solid var(--g200);border-radius:var(--rl);overflow:hidden;margin-bottom:20px}
+.table-head{padding:10px 14px;border-bottom:1px solid var(--g200);font-size:12px;font-weight:500;text-transform:uppercase;letter-spacing:.05em;color:var(--g500);display:flex;justify-content:space-between;align-items:center}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{padding:9px 13px;text-align:left;font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:.05em;color:var(--g500);border-bottom:1px solid var(--g200);background:var(--g50)}
+td{padding:10px 13px;border-bottom:1px solid var(--g100);color:var(--g700);vertical-align:middle}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:var(--g50)}
+.spill{display:inline-flex;align-items:center;padding:2px 8px;border-radius:99px;font-size:11px;font-weight:500}
+.s-confirmed{background:var(--green-lt);color:#166534}
+.s-pending_owner{background:var(--amber-lt);color:#92400e}
+.s-declined{background:var(--red-lt);color:#991b1b}
+.s-expired{background:var(--g100);color:var(--g500)}
+.s-cancelled{background:var(--g100);color:var(--g500)}
+.s-paid{background:var(--green-lt);color:#166534}
+.s-pending{background:var(--amber-lt);color:#92400e}
+
+/* MODAL */
+.modal-bg{display:none;align-items:center;justify-content:center;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:200;padding:16px;overflow-y:auto}
+.modal-bg.open{display:flex}
+.modal{background:#fff;border-radius:var(--rl);padding:22px;width:100%;max-width:500px;max-height:90vh;overflow-y:auto;margin:auto}
+.modal-title{font-family:var(--fd);font-size:19px;color:var(--navy);margin-bottom:14px;display:flex;justify-content:space-between;align-items:center}
+.modal-close{background:none;border:none;cursor:pointer;color:var(--g400);font-size:20px;padding:0;line-height:1}
+.modal-close:hover{color:var(--g700)}
+
+/* TOAST */
+.toast{position:fixed;bottom:20px;right:20px;padding:10px 16px;border-radius:var(--rm);font-size:13px;display:none;z-index:999;max-width:320px;align-items:center;gap:7px;box-shadow:0 4px 12px rgba(0,0,0,.15)}
+.toast.show{display:flex}
+.toast-default{background:var(--navy);color:#fff}
+.toast-success{background:var(--green);color:#fff}
+.toast-error{background:var(--red);color:#fff}
+
+/* ALERTS */
+.alert{padding:9px 12px;border-radius:var(--rm);font-size:13px;margin-bottom:10px;display:flex;align-items:flex-start;gap:7px}
+.alert-info{background:var(--blue-lt);color:#1e3a8a;border:1px solid #bfdbfe}
+.alert-warn{background:var(--amber-lt);color:#78350f;border:1px solid #fcd34d}
+.alert-success{background:var(--green-lt);color:#166534;border:1px solid #86efac}
+.alert-danger{background:var(--red-lt);color:#991b1b;border:1px solid #fca5a5}
+
+/* TRUST STRIP */
+.trust-strip{border-top:1px solid var(--g100);padding:10px 20px;display:flex;gap:20px;flex-wrap:wrap;background:var(--g50)}
+.trust-item{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--g500)}
+.trust-item i{color:var(--blue);font-size:14px}
+
+/* PAGINATION */
+.pagination{display:flex;gap:4px;justify-content:center;padding:14px 0}
+.pg-btn{padding:5px 10px;border:1px solid var(--g200);border-radius:var(--rm);font-size:13px;cursor:pointer;background:#fff;color:var(--g600)}
+.pg-btn.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+
+/* EMPTY STATE */
+.empty{text-align:center;padding:36px 20px;color:var(--g500)}
+.empty i{font-size:38px;margin-bottom:10px;display:block;opacity:.4}
+
+/* UTILS */
+.divider{border:none;border-top:1px solid var(--g100);margin:14px 0}
+.spinner{display:inline-block;width:16px;height:16px;border:2px solid rgba(255,255,255,.3);border-top-color:#fff;border-radius:50%;animation:spin .6s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.tag-required{color:var(--red);font-size:11px;margin-left:2px}
+
+/* RESPONSIVE */
+@media(max-width:680px){
+  .layout{grid-template-columns:1fr}
+  .sidebar{display:none}
+  .detail-grid{grid-template-columns:1fr}
+  .nav-links{display:none}
+  .hero h1{font-size:22px}
+}
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav class="nav">
+  <div class="nav-logo" onclick="showPage('home')">
+    <div class="logo-mark">V</div>
+    <span class="logo-text">Veliz <span>Stay</span></span>
+  </div>
+  <div class="nav-links">
+    <a onclick="showPage('home')">Browse stays</a>
+    <a onclick="requireAuth() && showPage('list-property')">List your home</a>
+    <a onclick="scrollToTrust()">How it works</a>
+  </div>
+  <div class="nav-right" id="nav-right">
+    <button class="btn btn-outline btn-sm" onclick="showPage('login')">Sign in</button>
+    <button class="btn btn-primary btn-sm" onclick="showPage('register')">Register</button>
+  </div>
+</nav>
+
+<!-- ── HOME ── -->
+<div id="page-home" class="page active">
+  <div class="hero">
+    <div class="hero-inner">
+      <h1>Verified home stays across<br><em>Pollachi · Coimbatore · Udumalpet</em></h1>
+      <p class="hero-sub">Fully managed, ID-verified guest network. Transparent pricing from ₹400/day. Owner-controlled with platform quality assurance.</p>
+      <div class="hero-stats">
+        <div><div class="hs-n">600+</div><div class="hs-l">Listed homes</div></div>
+        <div><div class="hs-n">3</div><div class="hs-l">Towns</div></div>
+        <div><div class="hs-n">4.8★</div><div class="hs-l">Avg. rating</div></div>
+        <div><div class="hs-n">20 min</div><div class="hs-l">Response SLA</div></div>
+      </div>
+      <div class="search-bar">
+        <input type="text" id="sq" placeholder="Search by area, town or name…" style="flex:2;min-width:150px" oninput="filterProps()">
+        <select id="s-town" onchange="filterProps()">
+          <option value="">All towns</option>
+          <option>Pollachi</option><option>Coimbatore</option><option>Udumalpet</option>
+        </select>
+        <select id="s-price" onchange="filterProps()">
+          <option value="">Any price</option>
+          <option value="0-600">₹400–₹600</option>
+          <option value="601-900">₹601–₹900</option>
+          <option value="901-1200">₹901–₹1,200</option>
+        </select>
+        <button class="btn btn-blue" onclick="filterProps()"><i class="ti ti-search"></i> Search</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="f-section">
+        <div class="f-label">Town <a onclick="clearFilters()">Clear all</a></div>
+        <label class="check-row"><input type="checkbox" class="ft" value="Pollachi" checked onchange="filterProps()"><span>Pollachi</span><span class="cc">248</span></label>
+        <label class="check-row"><input type="checkbox" class="ft" value="Coimbatore" checked onchange="filterProps()"><span>Coimbatore</span><span class="cc">241</span></label>
+        <label class="check-row"><input type="checkbox" class="ft" value="Udumalpet" checked onchange="filterProps()"><span>Udumalpet</span><span class="cc">97</span></label>
+      </div>
+      <hr class="s-div">
+      <div class="f-section">
+        <div class="f-label">Amenities</div>
+        <label class="check-row"><input type="checkbox" class="fa" value="wifi" onchange="filterProps()"><span>Wi-Fi</span></label>
+        <label class="check-row"><input type="checkbox" class="fa" value="ac" onchange="filterProps()"><span>AC</span></label>
+        <label class="check-row"><input type="checkbox" class="fa" value="car_parking" onchange="filterProps()"><span>Car parking</span></label>
+        <label class="check-row"><input type="checkbox" class="fa" value="security" onchange="filterProps()"><span>Security</span></label>
+        <label class="check-row"><input type="checkbox" class="fa" value="power_backup" onchange="filterProps()"><span>Power backup</span></label>
+      </div>
+      <hr class="s-div">
+      <div class="f-section">
+        <div class="f-label">Grade</div>
+        <label class="check-row"><input type="checkbox" class="fg" value="Gold" onchange="filterProps()"><span>Gold</span></label>
+        <label class="check-row"><input type="checkbox" class="fg" value="Silver" onchange="filterProps()"><span>Silver</span></label>
+        <label class="check-row"><input type="checkbox" class="fg" value="Bronze" onchange="filterProps()"><span>Bronze</span></label>
+      </div>
+    </aside>
+
+    <main>
+      <div class="list-head">
+        <span class="list-count" id="list-count">Loading…</span>
+        <div class="sort-row">Sort: <select id="sort-by" onchange="filterProps()">
+          <option value="">Recently listed</option>
+          <option value="rating">Highest rated</option>
+          <option value="price_asc">Price: low → high</option>
+          <option value="price_desc">Price: high → low</option>
+        </select></div>
+      </div>
+      <div id="listing-list"></div>
+    </main>
+  </div>
+
+  <div class="trust-strip" id="trust-strip">
+    <div class="trust-item"><i class="ti ti-shield-check"></i> ID-verified guests</div>
+    <div class="trust-item"><i class="ti ti-clock"></i> 20-min owner response</div>
+    <div class="trust-item"><i class="ti ti-lock"></i> Data confidential</div>
+    <div class="trust-item"><i class="ti ti-currency-rupee"></i> Transparent pricing</div>
+    <div class="trust-item"><i class="ti ti-star"></i> Quality-graded homes</div>
+    <div class="trust-item"><i class="ti ti-first-aid-kit"></i> Clinical support</div>
+    <div class="trust-item"><i class="ti ti-credit-card"></i> Razorpay secure payments</div>
+  </div>
+</div>
+
+<!-- ── PROPERTY DETAIL ── -->
+<div id="page-detail" class="page">
+  <div class="detail-wrap">
+    <button class="detail-back" onclick="showPage('home')"><i class="ti ti-arrow-left"></i> Back to listings</button>
+    <div id="detail-content"></div>
+  </div>
+</div>
+
+<!-- ── LOGIN ── -->
+<div id="page-login" class="page">
+  <div class="auth-wrap">
+    <div class="auth-card">
+      <div class="auth-logo">
+        <div class="logo-mark" style="margin:0 auto 8px;width:38px;height:38px;font-size:20px">V</div>
+        <div class="auth-title">Welcome back</div>
+        <div class="auth-sub">Sign in to Veliz Stay</div>
+      </div>
+      <div id="login-err" class="alert alert-warn" style="display:none"></div>
+      <div class="form-group"><label class="form-label">Email</label><input class="form-input" id="li-email" type="email" placeholder="you@email.com"></div>
+      <div class="form-group"><label class="form-label">Password</label><input class="form-input" id="li-pw" type="password" placeholder="••••••••" onkeydown="if(event.key==='Enter')login()"></div>
+      <button class="btn btn-primary btn-lg" style="width:100%;justify-content:center" id="li-btn" onclick="login()">Sign in</button>
+      <div class="auth-switch">No account? <a onclick="showPage('register')">Register free</a></div>
+      <div class="demo-note">Demo: admin@velizstay.com / VelizAdmin2026!</div>
+    </div>
+  </div>
+</div>
+
+<!-- ── REGISTER ── -->
+<div id="page-register" class="page">
+  <div class="auth-wrap">
+    <div class="auth-card">
+      <div class="auth-logo">
+        <div class="logo-mark" style="margin:0 auto 8px;width:38px;height:38px;font-size:20px">V</div>
+        <div class="auth-title">Create account</div>
+        <div class="auth-sub">Join Veliz Stay as a guest or homeowner</div>
+      </div>
+      <div id="reg-err" class="alert alert-warn" style="display:none"></div>
+      <div class="form-group"><label class="form-label">Full name</label><input class="form-input" id="rg-name" placeholder="Your full name"></div>
+      <div class="form-group"><label class="form-label">Email</label><input class="form-input" id="rg-email" type="email" placeholder="you@email.com"></div>
+      <div class="form-group"><label class="form-label">Phone</label><input class="form-input" id="rg-phone" placeholder="+91 98765 43210"></div>
+      <div class="form-group"><label class="form-label">I am a</label>
+        <select class="form-select" id="rg-role">
+          <option value="guest">Guest — looking to book a stay</option>
+          <option value="owner">Homeowner — want to list my property</option>
+        </select>
+      </div>
+      <div class="form-group"><label class="form-label">Password (min 8 chars)</label><input class="form-input" id="rg-pw" type="password" placeholder="••••••••" onkeydown="if(event.key==='Enter')register()"></div>
+      <button class="btn btn-primary btn-lg" style="width:100%;justify-content:center" id="rg-btn" onclick="register()">Create account</button>
+      <div class="auth-switch">Already registered? <a onclick="showPage('login')">Sign in</a></div>
+    </div>
+  </div>
+</div>
+
+<!-- ── LIST PROPERTY ── -->
+<div id="page-list-property" class="page">
+  <div class="auth-wrap" style="max-width:540px">
+    <div class="auth-card">
+      <div class="auth-title" style="text-align:left;margin-bottom:4px">List your home</div>
+      <div class="auth-sub" style="text-align:left;margin-bottom:16px">Fill in your property details. Our team will review and grade it within 48 hours.</div>
+      <div id="lp-err" class="alert alert-warn" style="display:none"></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+        <div class="form-group"><label class="form-label">Property name<span class="tag-required">*</span></label><input class="form-input" id="lp-name" placeholder="e.g. Nalini Farm House"></div>
+        <div class="form-group"><label class="form-label">Type<span class="tag-required">*</span></label>
+          <select class="form-select" id="lp-type"><option>House</option><option>Apartment</option><option>Villa</option><option>Cabin</option></select></div>
+        <div class="form-group"><label class="form-label">BHK</label>
+          <select class="form-select" id="lp-bhk"><option>1</option><option>2</option><option>3</option><option>4</option></select></div>
+        <div class="form-group"><label class="form-label">Max guests</label>
+          <select class="form-select" id="lp-guests"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>8</option></select></div>
+        <div class="form-group"><label class="form-label">Town<span class="tag-required">*</span></label>
+          <select class="form-select" id="lp-town"><option>Pollachi</option><option>Coimbatore</option><option>Udumalpet</option></select></div>
+        <div class="form-group"><label class="form-label">Area / locality</label><input class="form-input" id="lp-area" placeholder="e.g. Aliyar Road"></div>
+      </div>
+      <div class="form-group"><label class="form-label">Base price per day (₹400–₹1200)<span class="tag-required">*</span></label><input class="form-input" id="lp-price" type="number" min="400" max="1200" value="400"></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+        <div class="form-group"><label class="form-label">Parking type</label>
+          <select class="form-select" id="lp-ptype"><option value="none">No parking</option><option value="inside">Inside premises</option><option value="road">Road parking</option></select></div>
+        <div class="form-group"><label class="form-label">Parking vehicle</label>
+          <select class="form-select" id="lp-pveh"><option value="none">N/A</option><option value="car">Car</option><option value="bike">Two-wheeler</option></select></div>
+      </div>
+      <div class="form-group"><label class="form-label">Food option</label>
+        <select class="form-select" id="lp-food"><option value="none">No food service</option><option value="free">Free meals included</option><option value="pay_per_item">Pay per item</option><option value="daily_package">Daily package</option></select></div>
+      <div class="form-group"><label class="form-label">Description</label><textarea class="form-input" id="lp-desc" rows="3" placeholder="Describe your home, surroundings and what makes it special…"></textarea></div>
+      <div class="form-group"><label class="form-label">House rules</label><textarea class="form-input" id="lp-rules" rows="2" placeholder="e.g. No smoking, quiet after 10pm…"></textarea></div>
+      <div class="form-group"><label class="form-label">Amenities (select all that apply)</label>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:4px" id="amenity-checkboxes"></div>
+      </div>
+      <button class="btn btn-primary btn-lg" style="width:100%;justify-content:center" id="lp-btn" onclick="submitProperty()"><i class="ti ti-home-plus"></i> Submit for review</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── DASHBOARD ── -->
+<div id="page-dashboard" class="page">
+  <div class="dash-wrap">
+    <div class="dash-header">
+      <div class="dash-title" id="dash-title">Dashboard</div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap" id="dash-actions"></div>
+    </div>
+    <div id="dash-content"><div class="empty"><i class="ti ti-loader"></i>Loading…</div></div>
+  </div>
+</div>
+
+<!-- BOOKING MODAL -->
+<div class="modal-bg" id="booking-modal">
+  <div class="modal">
+    <div class="modal-title">Request booking <button class="modal-close" onclick="closeModal('booking-modal')"><i class="ti ti-x"></i></button></div>
+    <div id="bk-modal-content"></div>
+  </div>
+</div>
+
+<!-- PAYMENT MODAL -->
+<div class="modal-bg" id="payment-modal">
+  <div class="modal">
+    <div class="modal-title">Complete payment <button class="modal-close" onclick="closeModal('payment-modal')"><i class="ti ti-x"></i></button></div>
+    <div id="pay-modal-content"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+// ── Config ────────────────────────────────────────────────────────────────────
+const API = '';
+let currentUser = null;
+let allProps = [];
+let currentProp = null;
+let otpState = {};
+
+// ── API ───────────────────────────────────────────────────────────────────────
+async function api(path, method='GET', body=null) {
+  const token = localStorage.getItem('vs_token');
+  const opts = { method, headers: {'Content-Type':'application/json', ...(token?{Authorization:`Bearer ${token}`}:{})} };
+  if (body) opts.body = JSON.stringify(body);
+  const res = await fetch(API+path, opts);
+  const data = await res.json();
+  if (!res.ok) throw new Error(data.error || 'Request failed');
+  return data;
+}
+
+// ── Toast ─────────────────────────────────────────────────────────────────────
+function toast(msg, type='default', dur=3000) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = `toast show toast-${type}`;
+  clearTimeout(t._tid);
+  t._tid = setTimeout(()=>t.className='toast', dur);
+}
+
+// ── Pages ─────────────────────────────────────────────────────────────────────
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById('page-'+id)?.classList.add('active');
+  window.scrollTo(0,0);
+  if (id==='home') loadProps();
+  if (id==='dashboard') loadDashboard();
+  if (id==='list-property') renderAmenityCheckboxes();
+}
+
+function requireAuth() {
+  if (!currentUser) { toast('Please sign in first'); showPage('login'); return false; }
+  return true;
+}
+
+function scrollToTrust() {
+  showPage('home');
+  setTimeout(()=>document.getElementById('trust-strip')?.scrollIntoView({behavior:'smooth'}), 100);
+}
+
+function closeModal(id) { document.getElementById(id).classList.remove('open'); }
+
+// ── Auth ──────────────────────────────────────────────────────────────────────
+async function login() {
+  const btn = document.getElementById('li-btn');
+  const err = document.getElementById('login-err');
+  err.style.display='none';
+  btn.innerHTML='<span class="spinner"></span> Signing in…'; btn.disabled=true;
+  try {
+    const d = await api('/api/auth/login','POST',{email:document.getElementById('li-email').value.trim(), password:document.getElementById('li-pw').value});
+    localStorage.setItem('vs_token', d.token);
+    currentUser = d.user;
+    updateNav();
+    toast('Welcome back, '+d.user.name+'!','success');
+    showPage('dashboard');
+  } catch(e) {
+    err.textContent=e.message; err.style.display='flex';
+  } finally { btn.innerHTML='Sign in'; btn.disabled=false; }
+}
+
+async function register() {
+  const btn = document.getElementById('rg-btn');
+  const err = document.getElementById('reg-err');
+  err.style.display='none';
+  const name=document.getElementById('rg-name').value.trim();
+  const email=document.getElementById('rg-email').value.trim();
+  const phone=document.getElementById('rg-phone').value.trim();
+  const role=document.getElementById('rg-role').value;
+  const password=document.getElementById('rg-pw').value;
+  if (!name||!email||!password) { err.textContent='Please fill all required fields'; err.style.display='flex'; return; }
+  btn.innerHTML='<span class="spinner"></span> Creating…'; btn.disabled=true;
+  try {
+    const d = await api('/api/auth/register','POST',{name,email,phone,role,password});
+    localStorage.setItem('vs_token', d.token);
+    currentUser = d.user;
+    updateNav();
+    toast('Account created! Welcome to Veliz Stay.','success');
+    showPage('dashboard');
+  } catch(e) {
+    err.textContent=e.message; err.style.display='flex';
+  } finally { btn.innerHTML='Create account'; btn.disabled=false; }
+}
+
+function logout() {
+  localStorage.removeItem('vs_token');
+  currentUser=null; updateNav();
+  toast('Signed out');
+  showPage('home');
+}
+
+function updateNav() {
+  const el = document.getElementById('nav-right');
+  if (currentUser) {
+    el.innerHTML=`<span style="font-size:13px;color:var(--g600)">${currentUser.name}</span>
+      <button class="btn btn-outline btn-sm" onclick="showPage('dashboard')"><i class="ti ti-layout-dashboard"></i></button>
+      <button class="btn btn-outline btn-sm" onclick="logout()">Sign out</button>`;
+  } else {
+    el.innerHTML=`<button class="btn btn-outline btn-sm" onclick="showPage('login')">Sign in</button>
+      <button class="btn btn-primary btn-sm" onclick="showPage('register')">Register</button>`;
+  }
+}
+
+// ── Properties ────────────────────────────────────────────────────────────────
+const AI = {wifi:'ti-wifi',meals:'ti-tools-kitchen-2',free_meals:'ti-tools-kitchen-2',car_parking:'ti-car',bike_parking:'ti-motorbike',security:'ti-shield',power_backup:'ti-bolt',ac:'ti-air-conditioning',laundry:'ti-wash',pay_per_meal:'ti-salad',wildlife_access:'ti-paw'};
+const AL = {wifi:'Wi-Fi',meals:'Meals',free_meals:'Free meals',car_parking:'Car parking',bike_parking:'Bike parking',security:'Security',power_backup:'Power backup',ac:'AC',laundry:'Laundry',pay_per_meal:'Pay/meal',wildlife_access:'Wildlife'};
+const TI = {House:'ti-home-2',Apartment:'ti-building-skyscraper',Villa:'ti-crown',Cabin:'ti-mountains'};
+const TC = {Pollachi:'#3B6D11',Coimbatore:'#185FA5',Udumalpet:'#854F0B',Cabin:'#0F6E56',Villa:'#534AB7'};
+function chipClass(a){return ['wifi','free_meals','meals','security','power_backup'].includes(a)?'chip-green':['car_parking','bike_parking','ac'].includes(a)?'chip-blue':['pay_per_meal','laundry'].includes(a)?'chip-amber':'';}
+
+async function loadProps() {
+  try {
+    const d = await api('/api/properties');
+    allProps = d.properties || [];
+    renderListings(allProps);
+  } catch(e) { toast('Failed to load properties','error'); }
+}
+
+function filterProps() {
+  const q = document.getElementById('sq').value.toLowerCase();
+  const town = document.getElementById('s-town').value;
+  const pr = document.getElementById('s-price').value;
+  const sort = document.getElementById('sort-by').value;
+  const towns = [...document.querySelectorAll('.ft:checked')].map(c=>c.value);
+  const amens = [...document.querySelectorAll('.fa:checked')].map(c=>c.value);
+  const grades = [...document.querySelectorAll('.fg:checked')].map(c=>c.value);
+
+  let props = allProps.filter(p=>{
+    if (town && p.town!==town) return false;
+    if (towns.length && !towns.includes(p.town)) return false;
+    if (grades.length && !grades.includes(p.grade)) return false;
+    if (amens.length && !amens.every(a=>p.amenities?.includes(a))) return false;
+    if (q && !p.name.toLowerCase().includes(q) && !p.area.toLowerCase().includes(q) && !p.town.toLowerCase().includes(q)) return false;
+    if (pr) {
+      const [mn,mx]=pr.split('-').map(Number);
+      if (p.base_price<mn||p.base_price>mx) return false;
+    }
+    return true;
+  });
+  if (sort==='rating') props.sort((a,b)=>b.rating-a.rating);
+  else if (sort==='price_asc') props.sort((a,b)=>a.base_price-b.base_price);
+  else if (sort==='price_desc') props.sort((a,b)=>b.base_price-a.base_price);
+  renderListings(props);
+}
+
+function clearFilters() {
+  document.querySelectorAll('.ft').forEach(c=>c.checked=true);
+  document.querySelectorAll('.fa,.fg').forEach(c=>c.checked=false);
+  document.getElementById('sq').value='';
+  document.getElementById('s-town').value='';
+  document.getElementById('s-price').value='';
+  filterProps();
+}
+
+function renderListings(props) {
+  document.getElementById('list-count').innerHTML=`Showing <strong>${props.length}</strong> home${props.length!==1?'s':''}`;
+  const el = document.getElementById('listing-list');
+  if (!props.length) { el.innerHTML='<div class="empty"><i class="ti ti-search-off"></i>No homes match your filters.</div>'; return; }
+  el.innerHTML = props.map(p=>{
+    const icon = TI[p.type]||'ti-home';
+    const color = TC[p.type]||TC[p.town]||'#888';
+    const chips = (p.amenities||[]).slice(0,5).map(a=>`<span class="chip ${chipClass(a)}"><i class="ti ${AI[a]||'ti-check'}" style="font-size:11px"></i> ${AL[a]||a}</span>`).join('');
+    return `<div class="lcard" onclick="openProp('${p.id}')">
+      <div class="lcard-inner">
+        <div class="lcard-thumb"><i class="ti ${icon}" style="color:${color};font-size:28px"></i></div>
+        <div>
+          <div class="lcard-top">
+            <div>
+              <div class="lcard-name">${p.name}</div>
+              <div class="lcard-meta"><i class="ti ti-map-pin" style="font-size:12px"></i>${p.area}, ${p.town} &nbsp;·&nbsp; ${p.bhk} BHK &nbsp;·&nbsp; <i class="ti ti-users" style="font-size:12px"></i>${p.max_guests} max</div>
+            </div>
+            <div style="text-align:right">
+              <div class="lcard-price">₹${p.base_price.toLocaleString('en-IN')} <small>/ day</small></div>
+              <span class="vbadge" style="margin-top:3px"><i class="ti ti-shield-check" style="font-size:11px"></i> Verified</span>
+            </div>
+          </div>
+          <div class="chips">${chips}</div>
+          <div class="lcard-footer">
+            <span class="lcard-loc"><i class="ti ti-map" style="font-size:11px"></i> ${p.distance_note||p.area}</span>
+            <span class="lcard-rating"><i class="ti ti-star" style="font-size:12px;color:#f59e0b"></i> ${p.rating||0} · ${p.review_count||0} reviews
+              <span class="grade-pill g${p.grade}" style="margin-left:5px">${p.grade}</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+// ── Property Detail ───────────────────────────────────────────────────────────
+async function openProp(id) {
+  try {
+    const p = await api('/api/properties/'+id);
+    currentProp = p;
+    const icon = TI[p.type]||'ti-home';
+    const color = TC[p.type]||TC[p.town]||'#888';
+    const amenityHtml = (p.amenities||[]).map(a=>`<div class="amenity-item"><i class="ti ${AI[a]||'ti-check'}" style="font-size:15px;color:var(--blue)"></i> ${AL[a]||a}</div>`).join('');
+    const tariffHtml = (p.tariff?.breakdown||[]).map(b=>`<div class="t-row"><span>${b.label}</span><span>₹${b.amount}</span></div>`).join('')+`<div class="t-row"><span>Total / day</span><span>₹${p.tariff?.total||p.base_price}</span></div>`;
+    const reviewHtml = p.reviews?.length ? p.reviews.map(r=>`<div class="review-item"><div class="review-head"><span class="review-name">${r.guest_name}</span><span class="review-stars">${'★'.repeat(r.rating)}</span></div><div class="review-text">${r.comment||''}</div><div class="review-date">${(r.created_at||'').split('T')[0]}</div></div>`).join('') : '<div style="font-size:13px;color:var(--g400);padding:8px 0">No reviews yet.</div>';
+
+    document.getElementById('detail-content').innerHTML=`
+      <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:16px;flex-wrap:wrap">
+        <div style="width:50px;height:50px;border-radius:12px;background:var(--g100);border:1px solid var(--g200);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+          <i class="ti ${icon}" style="color:${color};font-size:26px"></i>
+        </div>
+        <div style="flex:1">
+          <div class="detail-title">${p.name}</div>
+          <div class="detail-sub">
+            <span><i class="ti ti-map-pin" style="font-size:12px"></i> ${p.area}, ${p.town}</span>
+            <span>${p.bhk} BHK · ${p.type}</span>
+            <span><i class="ti ti-users" style="font-size:12px"></i> Up to ${p.max_guests} guests</span>
+            <span class="grade-pill g${p.grade}">${p.grade}</span>
+            <span class="vbadge"><i class="ti ti-shield-check" style="font-size:11px"></i> Verified</span>
+          </div>
+        </div>
+        <div style="text-align:right">
+          <div style="font-family:var(--fd);font-size:26px;color:var(--navy)">₹${p.base_price.toLocaleString('en-IN')} <span style="font-size:13px;font-weight:400;color:var(--g500)">/ day</span></div>
+          <div style="font-size:12px;color:var(--g500);display:flex;align-items:center;gap:4px;justify-content:flex-end;margin-top:3px"><i class="ti ti-star" style="font-size:13px;color:#f59e0b"></i> ${p.rating} · ${p.review_count} reviews</div>
+        </div>
+      </div>
+      <div class="detail-grid">
+        <div>
+          <div style="margin-bottom:18px"><div class="section-lbl">About</div><p style="font-size:14px;color:var(--g700);line-height:1.7">${p.description||'No description provided.'}</p></div>
+          <div style="margin-bottom:18px"><div class="section-lbl">Amenities</div><div class="amenity-grid">${amenityHtml||'<span style="font-size:13px;color:var(--g400)">None listed</span>'}</div></div>
+          <div style="margin-bottom:18px"><div class="section-lbl">Tariff breakdown</div><div style="background:var(--g50);border:1px solid var(--g200);border-radius:var(--rm);padding:10px">${tariffHtml}</div></div>
+          <div style="margin-bottom:18px"><div class="section-lbl">House rules</div><p style="font-size:13px;color:var(--g600)">${p.house_rules||'No specific rules listed.'}</p></div>
+          <div><div class="section-lbl">Guest reviews (${p.review_count})</div>${reviewHtml}</div>
+        </div>
+        <div>
+          <div class="booking-box">
+            <h3>Book this home</h3>
+            <div class="timer-badge"><i class="ti ti-clock"></i> Owner responds in 20 min</div>
+            <div class="form-group"><label class="form-label">Check-in</label><input class="form-input" type="date" id="bk-in" min="${new Date().toISOString().split('T')[0]}" onchange="updateTotal()"></div>
+            <div class="form-group"><label class="form-label">Check-out</label><input class="form-input" type="date" id="bk-out" onchange="updateTotal()"></div>
+            <div class="form-group"><label class="form-label">Guests</label>
+              <select class="form-select" id="bk-guests" onchange="updateTotal()">
+                ${Array.from({length:p.max_guests},(_,i)=>`<option value="${i+1}">${i+1} guest${i>0?'s':''}</option>`).join('')}
+              </select>
+            </div>
+            <div id="bk-total"></div>
+            <button class="btn btn-primary btn-lg" style="width:100%;justify-content:center;margin-top:10px" onclick="startBooking()">
+              <i class="ti ti-calendar-plus"></i> Request booking
+            </button>
+            <div class="alert alert-info" style="margin-top:10px;font-size:12px"><i class="ti ti-shield-check"></i> ID verification required at checkout. All data is confidential.</div>
+          </div>
+        </div>
+      </div>`;
+    showPage('detail');
+  } catch(e) { toast('Failed to load property: '+e.message,'error'); }
+}
+
+function updateTotal() {
+  const ci=document.getElementById('bk-in')?.value;
+  const co=document.getElementById('bk-out')?.value;
+  if (!ci||!co||!currentProp) return;
+  const days=Math.ceil((new Date(co)-new Date(ci))/86400000);
+  if (days<1) return;
+  const t=currentProp.tariff?.total||currentProp.base_price;
+  document.getElementById('bk-total').innerHTML=`
+    <div class="total-line"><span>₹${t.toLocaleString('en-IN')} × ${days} day${days>1?'s':''}</span><span>₹${(t*days).toLocaleString('en-IN')}</span></div>
+    <div class="total-line grand"><span>Total</span><span>₹${(t*days).toLocaleString('en-IN')}</span></div>`;
+}
+
+// ── Booking flow ──────────────────────────────────────────────────────────────
+function startBooking() {
+  if (!requireAuth()) return;
+  const ci=document.getElementById('bk-in')?.value;
+  const co=document.getElementById('bk-out')?.value;
+  if (!ci||!co) { toast('Please select check-in and check-out dates'); return; }
+  const days=Math.ceil((new Date(co)-new Date(ci))/86400000);
+  if (days<1) { toast('Check-out must be after check-in'); return; }
+  const gc=parseInt(document.getElementById('bk-guests').value)||1;
+  renderBookingModal(gc,ci,co,days);
+  document.getElementById('booking-modal').classList.add('open');
+}
+
+function guestForm(i,gc) {
+  const lbl = i===1?'<span class="vbadge" style="margin-left:5px">Lead</span>':gc>=3?'<span style="font-size:11px;padding:1px 6px;border-radius:99px;background:var(--red-lt);color:var(--red);margin-left:5px">Full evidence</span>':'';
+  return `<div class="v-section">
+    <h4><i class="ti ti-user" style="font-size:14px;color:var(--navy)"></i> Guest ${i}${lbl}</h4>
+    <div class="form-group"><input class="form-input" id="g${i}-name" placeholder="Full name *"></div>
+    <div class="form-group">
+      <select class="form-select" id="g${i}-idtype">
+        <option value="">Select government ID *</option>
+        <option>Aadhaar card</option><option>Voter ID</option><option>Driving licence</option><option>Passport</option>
+      </select>
+    </div>
+    <div class="form-group"><input class="form-input" id="g${i}-idnum" placeholder="ID number *"></div>
+    <div class="otp-row form-group">
+      <input class="form-input" id="g${i}-phone" placeholder="Phone number *">
+      <button class="btn btn-outline btn-sm" onclick="doSendOTP(${i})">Send OTP</button>
+    </div>
+    <div id="g${i}-otp-wrap" style="display:none" class="otp-row form-group">
+      <input class="form-input" id="g${i}-otp" placeholder="Enter 6-digit OTP">
+      <button class="btn btn-blue btn-sm" onclick="doVerifyOTP(${i})">Verify</button>
+    </div>
+    <div class="form-group"><input class="form-input" id="g${i}-email" placeholder="Email address *" type="email"></div>
+    <div>
+      <div style="font-size:12px;color:var(--g500);margin-bottom:5px">Social profile (at least one)</div>
+      <div class="social-row">
+        <span class="schip" id="g${i}-fb" onclick="this.classList.toggle('on')"><i class="ti ti-brand-facebook"></i> Facebook</span>
+        <span class="schip" id="g${i}-li" onclick="this.classList.toggle('on')"><i class="ti ti-brand-linkedin"></i> LinkedIn</span>
+      </div>
+    </div>
+  </div>`;
+}
+
+function renderBookingModal(gc,ci,co,days) {
+  let forms='';
+  for(let i=1;i<=gc;i++) forms+=guestForm(i,gc);
+  document.getElementById('bk-modal-content').innerHTML=`
+    <div class="alert alert-info" style="margin-bottom:12px;font-size:12px"><i class="ti ti-lock"></i> All ID details are encrypted. Owner only sees a verified badge — never your ID, phone or email.</div>
+    <div class="form-group">
+      <label class="form-label">Purpose of visit <span class="tag-required">*</span></label>
+      <select class="form-select" id="bk-purpose">
+        <option value="">Select purpose</option>
+        <option>Tourism / leisure</option><option>Business</option><option>Medical visit</option>
+        <option>Family visit</option><option>Event / function</option><option>Other</option>
+      </select>
+    </div>
+    ${forms}
+    <button class="btn btn-primary btn-lg" style="width:100%;justify-content:center;margin-top:6px" id="bk-submit-btn"
+      onclick="submitBooking(${gc},'${ci}','${co}',${days})">
+      <i class="ti ti-calendar-check"></i> Confirm booking request
+    </button>`;
+}
+
+async function doSendOTP(i) {
+  const phone = document.getElementById(`g${i}-phone`)?.value.trim();
+  if (!phone) { toast('Enter phone number first'); return; }
+  try {
+    const d = await api('/api/verify/otp/send','POST',{phone});
+    document.getElementById(`g${i}-otp-wrap`).style.display='flex';
+    const msg = d.dev_otp ? `OTP sent. Dev mode OTP: ${d.dev_otp}` : 'OTP sent to '+phone;
+    toast(msg,'success',6000);
+  } catch(e) { toast(e.message,'error'); }
+}
+
+async function doVerifyOTP(i) {
+  const phone = document.getElementById(`g${i}-phone`)?.value.trim();
+  const otp   = document.getElementById(`g${i}-otp`)?.value.trim();
+  try {
+    await api('/api/verify/otp/confirm','POST',{phone,otp});
+    otpState[`g${i}`] = true;
+    toast('Phone verified!','success');
+    document.getElementById(`g${i}-otp-wrap`).innerHTML=`<span style="color:var(--green);font-size:13px;display:flex;align-items:center;gap:5px"><i class="ti ti-circle-check"></i> Phone verified</span>`;
+  } catch(e) { toast(e.message,'error'); }
+}
+
+async function submitBooking(gc,ci,co,days) {
+  const purpose = document.getElementById('bk-purpose')?.value;
+  if (!purpose) { toast('Select purpose of visit'); return; }
+  const guests = [];
+  for(let i=1;i<=gc;i++) {
+    const name=document.getElementById(`g${i}-name`)?.value.trim();
+    const idtype=document.getElementById(`g${i}-idtype`)?.value;
+    const idnum=document.getElementById(`g${i}-idnum`)?.value.trim();
+    const phone=document.getElementById(`g${i}-phone`)?.value.trim();
+    const email=document.getElementById(`g${i}-email`)?.value.trim();
+    if (!name||!idtype||!idnum||!phone||!email) { toast(`Complete all fields for Guest ${i}`); return; }
+    guests.push({full_name:name,govt_id_type:idtype,govt_id_number:idnum,phone,email,
+      facebook_url:document.getElementById(`g${i}-fb`)?.classList.contains('on')?'provided':null,
+      linkedin_url:document.getElementById(`g${i}-li`)?.classList.contains('on')?'provided':null});
+  }
+  const btn=document.getElementById('bk-submit-btn');
+  btn.innerHTML='<span class="spinner"></span> Sending…'; btn.disabled=true;
+  try {
+    const b = await api('/api/bookings','POST',{
+      property_id:currentProp.id, check_in:ci, check_out:co,
+      guests, purpose_of_visit:purpose,
+      parking_type:currentProp.parking_type, parking_vehicle:currentProp.parking_vehicle
+    });
+    closeModal('booking-modal');
+    toast(`Booking requested! Owner has 20 min to respond. Total: ₹${b.total_amount?.toLocaleString('en-IN')}`,'success',5000);
+  } catch(e) {
+    toast(e.message,'error');
+    btn.innerHTML='<i class="ti ti-calendar-check"></i> Confirm booking request'; btn.disabled=false;
+  }
+}
+
+// ── Payment ───────────────────────────────────────────────────────────────────
+async function initiatePayment(bookingId, amount) {
+  try {
+    const d = await api('/api/payments/create-order','POST',{booking_id:bookingId});
+    if (d.key_id==='rzp_dev_mode') {
+      // Dev mode — simulate
+      toast('Dev mode: Payment simulated as paid','success');
+      await api('/api/payments/confirm','POST',{razorpay_order_id:d.order.id, razorpay_payment_id:'pay_dev_'+Date.now(), razorpay_signature:'dev'});
+      loadDashboard();
+      return;
+    }
+    const options = {
+      key: d.key_id, amount: d.order.amount, currency:'INR', name:'Veliz Stay',
+      description:'Home stay booking', order_id: d.order.id,
+      handler: async (response) => {
+        try {
+          await api('/api/payments/confirm','POST',{
+            razorpay_order_id:response.razorpay_order_id,
+            razorpay_payment_id:response.razorpay_payment_id,
+            razorpay_signature:response.razorpay_signature
+          });
+          toast('Payment successful! Booking confirmed.','success');
+          loadDashboard();
+        } catch(e) { toast('Payment verification failed: '+e.message,'error'); }
+      },
+      prefill:{name:currentUser.name, email:currentUser.email},
+      theme:{color:'#1a1a2e'}
+    };
+    new window.Razorpay(options).open();
+  } catch(e) { toast(e.message,'error'); }
+}
+
+// ── List property ─────────────────────────────────────────────────────────────
+const AMENITY_OPTIONS = [
+  {v:'wifi',l:'Wi-Fi'},{v:'ac',l:'AC'},{v:'power_backup',l:'Power backup'},
+  {v:'car_parking',l:'Car parking'},{v:'bike_parking',l:'Bike parking'},
+  {v:'security',l:'Security'},{v:'meals',l:'Meals (owner cooks)'},
+  {v:'free_meals',l:'Free meals'},{v:'laundry',l:'Laundry'},
+  {v:'wildlife_access',l:'Wildlife access'}
+];
+
+function renderAmenityCheckboxes() {
+  const c = document.getElementById('amenity-checkboxes');
+  if (!c) return;
+  c.innerHTML = AMENITY_OPTIONS.map(a=>`
+    <label style="display:flex;align-items:center;gap:5px;font-size:13px;color:var(--g700);cursor:pointer;padding:4px 8px;border:1px solid var(--g200);border-radius:var(--rm);background:var(--g50)">
+      <input type="checkbox" value="${a.v}" style="accent-color:var(--navy)"> ${a.l}
+    </label>`).join('');
+}
+
+async function submitProperty() {
+  if (!requireAuth()) return;
+  const btn = document.getElementById('lp-btn');
+  const err = document.getElementById('lp-err');
+  err.style.display='none';
+  const amenities = [...document.querySelectorAll('#amenity-checkboxes input:checked')].map(c=>c.value);
+  const body = {
+    name:document.getElementById('lp-name').value.trim(),
+    type:document.getElementById('lp-type').value,
+    bhk:parseInt(document.getElementById('lp-bhk').value),
+    max_guests:parseInt(document.getElementById('lp-guests').value),
+    town:document.getElementById('lp-town').value,
+    area:document.getElementById('lp-area').value.trim(),
+    base_price:parseInt(document.getElementById('lp-price').value),
+    parking_type:document.getElementById('lp-ptype').value,
+    parking_vehicle:document.getElementById('lp-pveh').value,
+    food_option:document.getElementById('lp-food').value,
+    description:document.getElementById('lp-desc').value.trim(),
+    house_rules:document.getElementById('lp-rules').value.trim(),
+    amenities
+  };
+  if (!body.name) { err.textContent='Property name is required'; err.style.display='flex'; return; }
+  btn.innerHTML='<span class="spinner"></span> Submitting…'; btn.disabled=true;
+  try {
+    await api('/api/properties','POST',body);
+    toast('Property submitted! Our team will review within 48 hours.','success',5000);
+    showPage('dashboard');
+  } catch(e) {
+    err.textContent=e.message; err.style.display='flex';
+  } finally { btn.innerHTML='<i class="ti ti-home-plus"></i> Submit for review'; btn.disabled=false; }
+}
+
+// ── Dashboard ─────────────────────────────────────────────────────────────────
+async function loadDashboard() {
+  if (!currentUser) { showPage('login'); return; }
+  const el=document.getElementById('dash-content');
+  const acts=document.getElementById('dash-actions');
+  document.getElementById('dash-title').textContent =
+    currentUser.role==='admin'?'Admin dashboard':currentUser.role==='owner'?'Owner dashboard':'My stays';
+
+  if (currentUser.role==='admin') {
+    el.innerHTML='<div class="empty"><i class="ti ti-loader"></i>Loading…</div>';
+    try {
+      const [stats,bookings] = await Promise.all([api('/api/admin/stats'), api('/api/admin/bookings')]);
+      acts.innerHTML=`<button class="btn btn-outline btn-sm" onclick="loadDashboard()"><i class="ti ti-refresh"></i> Refresh</button>
+        <button class="btn btn-primary btn-sm" onclick="showPage('home')"><i class="ti ti-search"></i> Browse</button>`;
+      el.innerHTML=`
+        <div class="stats-grid">
+          <div class="stat-card"><div class="stat-n" style="color:var(--green)">${stats.properties.active}</div><div class="stat-l">Active homes</div></div>
+          <div class="stat-card"><div class="stat-n" style="color:var(--amber)">${stats.properties.pending}</div><div class="stat-l">Pending review</div></div>
+          <div class="stat-card"><div class="stat-n">${stats.bookings.confirmed}</div><div class="stat-l">Confirmed bookings</div></div>
+          <div class="stat-card"><div class="stat-n" style="color:var(--blue)">${stats.bookings.pending_owner}</div><div class="stat-l">Awaiting owner</div></div>
+          <div class="stat-card"><div class="stat-n">${stats.users.total}</div><div class="stat-l">Users</div></div>
+          <div class="stat-card"><div class="stat-n" style="color:var(--green)">₹${Math.round(stats.totalRevenue/100000)||0}L</div><div class="stat-l">Revenue</div></div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin-bottom:20px">
+          ${(stats.townBreakdown||[]).map(t=>`<div class="stat-card"><div class="stat-n">${t.count}</div><div class="stat-l">${t.town}</div></div>`).join('')}
+        </div>
+        <div class="table-wrap">
+          <div class="table-head"><span>All bookings</span></div>
+          <table><thead><tr><th>Property</th><th>Guest</th><th>Dates</th><th>Amount</th><th>Status</th><th>Payment</th></tr></thead>
+          <tbody>${bookings.length?bookings.map(b=>`
+            <tr>
+              <td>${b.property_name||'—'}</td>
+              <td>${b.guest_name||'—'}</td>
+              <td style="white-space:nowrap;font-size:12px">${b.check_in} → ${b.check_out}</td>
+              <td>₹${(b.total_amount||0).toLocaleString('en-IN')}</td>
+              <td><span class="spill s-${b.status}">${b.status}</span></td>
+              <td><span class="spill s-${b.payment_status}">${b.payment_status}</span></td>
+            </tr>`).join(''):`<tr><td colspan="6" style="text-align:center;color:var(--g400);padding:20px">No bookings yet</td></tr>`}
+          </tbody></table>
+        </div>
+        <div class="table-wrap">
+          <div class="table-head"><span>Pending owner response</span></div>
+          <table><thead><tr><th>Property</th><th>Owner</th><th>Guest</th><th>Expires</th><th>Action</th></tr></thead>
+          <tbody id="pending-tbody"><tr><td colspan="5" style="text-align:center;color:var(--g400);padding:14px">Loading…</td></tr></tbody>
+          </table>
+        </div>`;
+      loadPendingBookings();
+    } catch(e) { el.innerHTML=`<div class="alert alert-danger">${e.message}</div>`; }
+
+  } else if (currentUser.role==='owner') {
+    acts.innerHTML=`<button class="btn btn-primary btn-sm" onclick="showPage('list-property')"><i class="ti ti-plus"></i> Add property</button>
+      <button class="btn btn-outline btn-sm" onclick="loadDashboard()"><i class="ti ti-refresh"></i></button>`;
+    try {
+      const bookings = await api('/api/bookings');
+      el.innerHTML=`
+        <div class="table-wrap">
+          <div class="table-head"><span>Booking requests for your properties</span></div>
+          <table><thead><tr><th>Property</th><th>Dates</th><th>Guests</th><th>Total</th><th>Status</th><th>Action</th></tr></thead>
+          <tbody>${bookings.length?bookings.map(b=>`
+            <tr>
+              <td>${b.property_name||b.property_id}</td>
+              <td style="white-space:nowrap;font-size:12px">${b.check_in} → ${b.check_out}</td>
+              <td>${b.guest_count}</td>
+              <td>₹${(b.total_amount||0).toLocaleString('en-IN')}</td>
+              <td><span class="spill s-${b.status}">${b.status}</span></td>
+              <td>${b.status==='pending_owner'?`
+                <div style="display:flex;gap:5px">
+                  <button class="btn btn-green btn-sm" onclick="respondBooking('${b.id}','accept')">Accept</button>
+                  <button class="btn btn-outline btn-sm" onclick="respondBooking('${b.id}','decline')">Decline</button>
+                </div>`:'—'}
+              </td>
+            </tr>`).join(''):`<tr><td colspan="6" style="text-align:center;color:var(--g400);padding:20px">No bookings yet. <a style="color:var(--blue);cursor:pointer" onclick="showPage('home')">Browse to test →</a></td></tr>`}
+          </tbody></table>
+        </div>`;
+    } catch(e) { el.innerHTML=`<div class="alert alert-danger">${e.message}</div>`; }
+
+  } else {
+    acts.innerHTML=`<button class="btn btn-blue btn-sm" onclick="showPage('home')"><i class="ti ti-search"></i> Browse homes</button>`;
+    try {
+      const bookings = await api('/api/bookings');
+      el.innerHTML=`
+        <div class="table-wrap">
+          <div class="table-head"><span>My bookings</span></div>
+          <table><thead><tr><th>Property</th><th>Dates</th><th>Total</th><th>Status</th><th>Payment</th><th>Action</th></tr></thead>
+          <tbody>${bookings.length?bookings.map(b=>`
+            <tr>
+              <td>${b.property_name||'—'}</td>
+              <td style="white-space:nowrap;font-size:12px">${b.check_in} → ${b.check_out}</td>
+              <td>₹${(b.total_amount||0).toLocaleString('en-IN')}</td>
+              <td><span class="spill s-${b.status}">${b.status}</span></td>
+              <td><span class="spill s-${b.payment_status}">${b.payment_status}</span></td>
+              <td>${b.status==='confirmed'&&b.payment_status==='pending'?
+                `<button class="btn btn-green btn-sm" onclick="initiatePayment('${b.id}',${b.total_amount})"><i class="ti ti-credit-card"></i> Pay</button>`
+                :b.status==='pending_owner'?`<button class="btn btn-outline btn-sm" onclick="cancelBooking('${b.id}')">Cancel</button>`:'—'}
+              </td>
+            </tr>`).join(''):`<tr><td colspan="6" style="text-align:center;color:var(--g400);padding:20px">No bookings yet. <a style="color:var(--blue);cursor:pointer" onclick="showPage('home')">Browse homes →</a></td></tr>`}
+          </tbody></table>
+        </div>`;
+    } catch(e) { el.innerHTML=`<div class="alert alert-danger">${e.message}</div>`; }
+  }
+}
+
+async function loadPendingBookings() {
+  try {
+    const rows = await api('/api/admin/pending-bookings');
+    const tb = document.getElementById('pending-tbody');
+    if (!tb) return;
+    tb.innerHTML = rows.length ? rows.map(b=>`
+      <tr>
+        <td>${b.property_name}</td>
+        <td>${b.owner_name}</td>
+        <td>${b.guest_name}</td>
+        <td style="font-size:12px;color:var(--amber)">${new Date(b.expires_at).toLocaleTimeString('en-IN')}</td>
+        <td>
+          <button class="btn btn-green btn-sm" onclick="adminRespondBooking('${b.id}','accept')">Accept</button>
+          <button class="btn btn-outline btn-sm" style="margin-left:4px" onclick="adminRespondBooking('${b.id}','decline')">Decline</button>
+        </td>
+      </tr>`).join('') : `<tr><td colspan="5" style="text-align:center;color:var(--g400);padding:14px">No pending bookings</td></tr>`;
+  } catch(e) {}
+}
+
+async function respondBooking(id, action) {
+  try {
+    await api(`/api/bookings/${id}/respond`,'PUT',{action});
+    toast(action==='accept'?'Booking accepted!':'Booking declined', action==='accept'?'success':'default');
+    loadDashboard();
+  } catch(e) { toast(e.message,'error'); }
+}
+
+async function adminRespondBooking(id, action) {
+  await respondBooking(id, action);
+  loadPendingBookings();
+}
+
+async function cancelBooking(id) {
+  if (!confirm('Cancel this booking request?')) return;
+  try {
+    await api(`/api/bookings/${id}/cancel`,'PUT',{});
+    toast('Booking cancelled');
+    loadDashboard();
+  } catch(e) { toast(e.message,'error'); }
+}
+
+// ── Init ──────────────────────────────────────────────────────────────────────
+async function init() {
+  const token = localStorage.getItem('vs_token');
+  if (token) {
+    try {
+      currentUser = await api('/api/auth/me');
+      updateNav();
+    } catch { localStorage.removeItem('vs_token'); }
+  }
+  loadProps();
+}
+
+init();
+</script>
+
+<!-- Razorpay SDK (loads only when payment is triggered) -->
+<script src="https://checkout.razorpay.com/v1/checkout.js" defer></script>
+</body>
+</html>
